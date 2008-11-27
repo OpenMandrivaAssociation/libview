@@ -1,6 +1,6 @@
 %define name libview
 %define version 0.6.2
-%define release %mkrel 1
+%define release %mkrel 2
 %define major 2
 %define libname %mklibname view %major
 %define develname %mklibname -d view
@@ -9,6 +9,7 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://prdownloads.sourceforge.net/view/%{name}-%{version}.tar.bz2
+Patch:	 libview-0.6.2-fix-pkgconfig.patch
 License: MIT
 Group: System/Libraries
 Url: http://view.sourceforge.net/
@@ -40,6 +41,7 @@ of GTK+ widgets used within VMware products, free for everybody's use.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure2_5x --enable-deprecated --disable-static
