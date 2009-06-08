@@ -1,6 +1,6 @@
 %define name libview
-%define version 0.6.2
-%define release %mkrel 2
+%define version 0.6.4
+%define release %mkrel 1
 %define major 2
 %define libname %mklibname view %major
 %define develname %mklibname -d view
