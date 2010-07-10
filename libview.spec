@@ -1,6 +1,6 @@
 %define name libview
-%define version 0.6.4
-%define release %mkrel 2
+%define version 0.6.6
+%define release %mkrel 1
 %define major 2
 %define libname %mklibname view %major
 %define develname %mklibname -d view
@@ -42,6 +42,8 @@ of GTK+ widgets used within VMware products, free for everybody's use.
 %prep
 %setup -q
 %patch -p1
+#gw 0.6.6: wrong libtool version
+autoreconf -fi
 
 %build
 %configure2_5x --enable-deprecated --disable-static
