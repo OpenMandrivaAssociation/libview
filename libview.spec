@@ -1,6 +1,6 @@
 %define name libview
 %define version 0.6.6
-%define release %mkrel 3
+%define release %mkrel 4
 %define major 2
 %define libname %mklibname view %major
 %define develname %mklibname -d view
@@ -15,6 +15,7 @@ Group: System/Libraries
 Url: http://view.sourceforge.net/
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: gtkmm2.4-devel
+BuildRequires: ffi5-devel
 
 %description
 libview is VMware's Incredibly Exciting Widgets, a useful collection
