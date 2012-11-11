@@ -1,0 +1,17 @@
+diff -p -up libview-0.6.2/libview.pc.in~ libview-0.6.2/libview.pc.in
+--- libview-0.6.2/libview.pc.in~	2008-06-11 01:21:15.000000000 +0200
++++ libview-0.6.2/libview.pc.in	2008-11-27 14:32:17.000000000 +0100
+@@ -1,9 +1,9 @@
+-prefix=${prefix}
+-libdir=${exec_prefix}/lib
++prefix=@prefix@
++libdir=@libdir@
+ includedir=${prefix}/include
+ 
+ Name: libview
+ Description: VMware's Incredibly Exciting Widgets for GTK+
+ Version: @VERSION@
+-Libs: -L${libdir} -lview @PACKAGE_LIBS@
+-Cflags: -I${includedir} @PACKAGE_CFLAGS@
++Libs: -L${libdir} -lview
++Cflags: -I${includedir}
