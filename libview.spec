@@ -12,7 +12,7 @@ Url: http://view.sourceforge.net/
 Source0: http://prdownloads.sourceforge.net/view/%{name}-%{version}.tar.bz2
 Patch0:	 libview-0.6.2-fix-pkgconfig.patch
 BuildRequires: gtkmm2.4-devel
-BuildRequires: ffi5-devel
+BuildRequires: pkgconfig(libffi)
 
 %description
 libview is VMware's Incredibly Exciting Widgets, a useful collection
@@ -40,9 +40,12 @@ of GTK+ widgets used within VMware products, free for everybody's use.
 %setup -q
 %apply_patches
 #gw 0.6.6: wrong libtool version
-autoreconf -fi
 
 %build
+sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADER/g' configure.ac
+sed -i 's/AM_PROG_CC_STDC/AC_PROG_CC/g' configure.ac
+autoreconf -fi
+
 %configure2_5x \
 	--enable-deprecated \
 	--disable-static
