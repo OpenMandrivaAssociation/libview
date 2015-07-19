@@ -5,7 +5,7 @@
 Summary:	VMware's Incredibly Exciting Widgets
 Name:		libview
 Version:	0.6.6
-Release:	13
+Release:	14
 License:	MIT
 Group:		System/Libraries
 Url:		http://view.sourceforge.net/
