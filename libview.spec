@@ -38,7 +38,7 @@ of GTK+ widgets used within VMware products, free for everybody's use.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 sed -i 's/AM_CONFIG_HEADER/AC_CONFIG_HEADER/g' configure.ac
 sed -i 's/AM_PROG_CC_STDC/AC_PROG_CC/g' configure.ac
 autoreconf -fi
