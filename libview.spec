@@ -8,7 +8,7 @@ Version:	0.6.6
 Release:	16
 License:	MIT
 Group:		System/Libraries
-Url:		http://view.sourceforge.net/
+Url:		https://view.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/view/%{name}-%{version}.tar.bz2
 Patch0:		libview-0.6.2-fix-pkgconfig.patch
 BuildRequires:	pkgconfig(gtkmm-2.4)
