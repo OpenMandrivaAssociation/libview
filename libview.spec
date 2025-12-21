@@ -11,6 +11,11 @@ Group:		System/Libraries
 Url:		https://view.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/view/%{name}-%{version}.tar.bz2
 Patch0:		libview-0.6.2-fix-pkgconfig.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(gtkmm-2.4)
 BuildRequires:	pkgconfig(libffi)
 
